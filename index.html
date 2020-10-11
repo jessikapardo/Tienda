@@ -1,437 +1,450 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <title>FINESTWINE</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <title>FINESTWINE</title>
+    </head>
 
-<body>
+    <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <!-- LOGO y NAV -->
-        <nav class="nav-ppal">
-            <div class="contenedor-logo">
-                <i class="fas fa-wine-glass-alt"></i>
-                <p>FINESTWINE</p>
+        <!-- HEADER -->
+        <header class="header">
+            <!-- LOGO y NAV -->
+            <nav class="nav-ppal">
+                <div class="contenedor-logo">
+                    <i class="fas fa-wine-glass-alt"></i>
+                    <p>FINESTWINE</p>
+                </div>
+                <div class="contenedor-carrito">
+                    <button type="button" class="btn-carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Carrito (<span>0</span> items)</p>
+                    </button>
+                </div>
+            </nav>
+            <!-- IMAGEN FONDO HEADER -->
+            <div class="contenedor-banner">
+                <h1 class="titulo-ppal">WINE STORE</h1>
             </div>
-            <div class="contenedor-carrito">
-                <button type="button" class="btn-carrito">
-                    <i class="fas fa-shopping-cart"></i>
-                    <p>Carrito (<span>0</span> items)</p>
+
+        </header>
+
+        <!-- CUERPO -->
+        <main class="contenedor-gral">
+
+            <!-- FILTROS TODOS -->
+            <aside class="filtros">
+                <!-- CONTENEDOR FILTROS -->
+
+                <button type="button" class="btn-cerrar-filtros hidden" aria-label="Cerrar filtros">
+                    <i class="fas fa-times" aria-hidden="true"></i>
                 </button>
-            </div>
-        </nav>
-        <!-- IMAGEN FONDO HEADER -->
-        <div class="contenedor-banner">
-            <h1 class="titulo-ppal">WINE STORE</h1>
-        </div>
+                <div class="contenedor-filtros">
+                    <div class="">
+                        <h2>FILTROS</h2>
+                        <button type="button" id="limpiar-filtros">
+                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                            <p>Limpiar</p>
+                        </button>
+                    </div>
+                </div>
 
-    </header>
+                <!-- BUSQUEDA  -->
+                <form>
+                    <div class="busqueda">
+                        <label for="busqueda-filtro">
+                            <h3>BUSQUEDA</h3>
+                            <input type="text" id="busqueda-filtro" class="busqueda-filtro"
+                                placeholder="Buscar productos" />
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </label>
+                    </div>
 
-    <!-- CUERPO -->
-    <main class="contenedor-gral">
+                    <!-- CATEGORIAS  -->
+                    <div class="categorias">
+                        <h3>CATEGORIA</h3>
+                        <label for="blancos">
+                            <input type="checkbox" name="vinos" class="categoria-vinos" value="blancos" id="blancos" />
+                            BLANCOS
+                        </label>
+                        <label for="naranjos">
+                            <input type="checkbox" name="vinos" class="categoria-vinos" value="naranjos" id="naranjos" />
+                            NARANJOS
+                        </label>
+                        <label for="rosados">
+                            <input type="checkbox" name="vinos" class="categoria-vinos" value="rosados" id="rosados" />
+                            ROSADOS
+                        </label>
+                        <label for="tintos">
+                            <input type="checkbox" name="vinos" class="categoria-vinos" value="tintos" id="tintos" />
+                            TINTOS
+                        </label>
+                    </div>
+                    <!-- PUNTAJE ESTRELLAS -->
+                    <div class="puntaje">
+                        <h3>PUNTAJE</h3>
+                        <label for="checkbox-5">
+                            <input type="checkbox" name="review" class="filtro-review" value="5" id="checkbox-5" />
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                            (5)
+                        </label>
+                        <label for="checkbox-4">
+                            <input type="checkbox" name="review" class="filtro-review" value="4" id="checkbox-4" />
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                            (4)
+                        </label>
+                        <label for="checkbox-3">
+                            <input type="checkbox" name="review" class="filtro-review" value="3" id="checkbox-3" />
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                            (3)
+                        </label>
+                        <label for="checkbox-2">
+                            <input type="checkbox" name="review" class="filtro-review" value="2" id="checkbox-2" />
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                            (2)
+                        </label>
+                        <label for="checkbox-1">
+                            <input type="checkbox" name="review" class="filtro-review" value="1" id="checkbox-1" />
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                            (1)
+                        </label>
+                    </div>
+                </form>
+            </aside>
 
-        <!-- FILTROS TODOS -->
-        <aside class="filtros">
-            <!-- CONTENEDOR FILTROS -->
-            <div class="contenedor-filtros">
-                <div class="">
-                    <h2>FILTROS</h2>
-                    <button type="button" id="limpiar-filtros">
-                        <i class="fas fa-trash-alt"></i>
-                        <p>Limpiar</p>
+            <!-- PRODUCTOS -->
+            <section class="productos">
+
+                <!-- HEADER PRODUCTOS -->
+                <div class="header-productos">
+
+                    <p>Monstrando 12 producto(s) de 12</p>
+
+                    <div class="ver-como">
+                        <p>Ver como</p>
+                        <button type="button" class="btn-vista-grilla" aria-label="Ver como grilla">
+                            <i class="fas fa-th" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn-vista-lista" aria-label="Ver como lista">
+                            <i class="fas fa-list" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <button type="button" class="btn-filtros-responsive hidden" aria-label="Abrir filtros">
+                        <i class="fas fa-filter" aria-hidden="true"></i>
+                        <p>Filtros</p>
                     </button>
                 </div>
-            </div>
 
-            <!-- BUSQUEDA  -->
-            <div class="busqueda">
-                <label for="busqueda-filtro">
-                    <h3>BUSQUEDA</h3>
-                    <input type="text" id="busqueda-filtro" class="busqueda-filtro" placeholder="Buscar productos" />
-                    <i class="fas fa-search"></i>
-                </label>
-            </div>
+                <!-- CONTENEDOR PRODUCTOS -->
+                <div class="contenedor-productos">
 
-            <!-- CATEGORIAS  -->
-            <div class="categorias">
-                <h3>CATEGORIA</h3>
-                <label for="blancos">
-                    <input type="checkbox" name="vinos" class="categoria-vinos" value="blancos" id="blancos" />
-                    BLANCOS
-                </label>
-                <label for="naranjos">
-                    <input type="checkbox" name="vinos" class="categoria-vinos" value="naranjos" id="naranjos" />
-                    NARANJOS
-                </label>
-                <label for="rosados">
-                    <input type="checkbox" name="vinos" class="categoria-vinos" value="rosados" id="rosados" />
-                    ROSADOS
-                </label>
-                <label for="tintos">
-                    <input type="checkbox" name="vinos" class="categoria-vinos" value="tintos" id="tintos" />
-                    TINTOS
-                </label>
-            </div>
-            <!-- PUNTAJE ESTRELLAS -->
-            <div class="puntaje">
-                <h3>PUNTAJE</h3>
-                <label for="checkbox-5">
-                    <input type="checkbox" name="review" class="filtro-review" value="5" id="checkbox-5" />
-                    <div class="review">
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                    </div>
-                    (5)
-                </label>
-                <label for="checkbox-4">
-                    <input type="checkbox" name="review" class="filtro-review" value="4" id="checkbox-4" />
-                    <div class="review">
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
-                    </div>
-                    (4)
-                </label>
-                <label for="checkbox-3">
-                    <input type="checkbox" name="review" class="filtro-review" value="3" id="checkbox-3" />
-                    <div class="review">
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
-                    </div>
-                    (3)
-                </label>
-                <label for="checkbox-2">
-                    <input type="checkbox" name="review" class="filtro-review" value="2" id="checkbox-2" />
-                    <div class="review">
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
-                    </div>
-                    (2)
-                </label>
-                <label for="checkbox-1">
-                    <input type="checkbox" name="review" class="filtro-review" value="1" id="checkbox-1" />
-                    <div class="review">
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
-                        <i class="far fa-star" aria-hidden="true"></i>
-                    </div>
-                    (1)
-                </label>
-            </div>
-        </aside>
+                    <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
 
-        <!-- PRODUCTOS -->
-        <section class="productos">
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <p class="descripcion-producto hidden">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
 
-            <!-- HEADER PRODUCTOS -->
-            <div class="header-productos">
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
 
-                <p>Monstrando 12 producto(s) de 12</p>
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
 
-                <div class="ver-como">
-                    <p>Ver como</p>
-                    <button type="button">
-                        <i class="fas fa-th"></i>
-                    </button>
-                    <button type="button">
-                        <i class="fas fa-list"></i>
-                    </button>
-                    <button type="button btn-filtro hidden">
-                        <i class="fas fa-filter"></i>
-                    </button>
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                        data-precio="1250" data-rating="5">
+                        <div class="producto-img-container">
+                            <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                        </div>
+                        <div class="info-producto">
+                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 1250</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="comprar">
+                                <button class="boton-comprar">COMPRAR</button>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
+
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="contenido-footer">
+                <img />
+                <p>FinestWine 🍷 - Gracias por visitarnos </p>
             </div>
+        </footer>
 
-            <!-- CONTENEDOR PRODUCTOS -->
-            <div class="contenedor-productos">
-
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
-                    data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
-                    </div>
-                    <div class="info-producto">
-                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                        <p class="precio-producto">$ 1250</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="comprar">
-                            <button class="boton-comprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="contenido-footer">
-            <img />
-            <p>FinestWine 🍷 - Gracias por visitarnos </p>
-        </div>
-    </footer>
-
-    <!--JAVASCRIPT-->
-    <script src="index.js"></script>
-</body>
+        <!--JAVASCRIPT-->
+        <script src="index.js"></script>
+    </body>
 
 </html>
