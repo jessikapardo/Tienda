@@ -7,34 +7,40 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <title>FRENCI WINE STORE</title>
+    <title>FINESTWINE</title>
 </head>
 
 <body>
 
     <!-- HEADER -->
-    <header>
+    <header class="header">
         <!-- LOGO y NAV -->
-        <div class="header">
-            <div class="logo">FRENCI</div>
-            <div class="carrito">
-                <i class="fas fa-shopping-cart"></i>
-                <p>Carrito (0 items)</p>
+        <nav class="nav-ppal">
+            <div class="contenedor-logo">
+                <img class="logo" src="img/logo.png" />
+                <p>FINESTWINE</p>
             </div>
-        </div>
+            <div class="contenedor-carrito">
+                <button type="button" class="btn-carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Carrito (0 items)</p>
+                </button>
+            </div>
+        </nav>
         <!-- IMAGEN FONDO HEADER -->
-        <div class="background-img">
-            <h1>WINE STORE</h1>
+        <div class="contenedor-banner">
+            <h1 class="titulo-ppal">WINE STORE</h1>
         </div>
+
     </header>
 
     <!-- CUERPO -->
-    <div class="contenedor-gral">
+    <main class="contenedor-gral">
 
         <!-- FILTROS TODOS -->
         <aside class="filtros">
             <!-- CONTENEDOR FILTROS -->
-            <div class="contedor-filtros">
+            <div class="contenedor-filtros">
                 <h2>FILTROS</h2>
                 <button type="button" id="limpiar-filtros">
                     <i class="fas fa-trash-alt"></i>
@@ -44,41 +50,38 @@
 
             <!-- BUSQUEDA  -->
             <div class="busqueda">
-                <label>
+                <label for="busqueda-filtro">
                     <h3>BUSQUEDA</h3>
-                    <input type="text" id="busqueda-filtro" />
+                    <input type="text" id="busqueda-filtro" class="busqueda-filtro" placeholder="Buscar productos" />
+                    <i class="fas fa-search"></i>
                 </label>
             </div>
 
-            <!-- CATEGORIA  -->
-            <div class="categoria">
+            <!-- CATEGORIAS  -->
+            <div class="categorias">
                 <h3>CATEGORIA</h3>
-                <label>
-                    <input type="checkbox" name="malbec" class="filter review-filter" value="malbec" />
-                    <p>Malbec</p>
+                <label for="blancos">
+                    <input type="checkbox" name="vinos" class="categoria-vinos" value="blancos" id="blancos" />
+                    BLANCOS
                 </label>
-                <label>
-                    <input type="checkbox" name="cabernet" class="filter review-filter" value="cabernet" />
-                    <p>Cabernet Sauvignon</p>
+                <label for="naranjos">
+                    <input type="checkbox" name="vinos" class="categoria-vinos" value="naranjos" id="naranjos" />
+                    NARANJOS
                 </label>
-                <label>
-                    <input type="checkbox" name="pinot-noir" class="filter review-filter" value="pinot-noir" />
-                    <p>Pinot Noir</p>
+                <label for="rosados">
+                    <input type="checkbox" name="vinos" class="categoria-vinos" value="rosados" id="rosados" />
+                    ROSADOS
                 </label>
-                <label>
-                    <input type="checkbox" name="merlot" class="filter review-filter" value="merlot" />
-                    <p>Merlot</p>
-                </label>
-                <label>
-                    <input type="checkbox" name="chardonnay" class="filter review-filter" value="chardonnay" />
-                    <p>Chardonnay</p>
+                <label for="tintos">
+                    <input type="checkbox" name="vinos" class="categoria-vinos" value="tintos" id="tintos" />
+                    TINTOS
                 </label>
             </div>
-            <!-- PUNTAJE  -->
+            <!-- PUNTAJE ESTRELLAS -->
             <div class="puntaje">
-                <h3 class="filter-name">PUNTAJE</h3>
-                <label>
-                    <input type="checkbox" name="review" class="filter review-filter" value="5" id="checkbox-5" />
+                <h3>PUNTAJE</h3>
+                <label for="checkbox-5">
+                    <input type="checkbox" name="review" class="filtro-review" value="5" id="checkbox-5" />
                     <div class="review">
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="fas fa-star" aria-hidden="true"></i>
@@ -88,8 +91,8 @@
                     </div>
                     (5)
                 </label>
-                <label>
-                    <input type="checkbox" name="review" class="filter review-filter" value="4" id="checkbox-4" />
+                <label for="checkbox-4">
+                    <input type="checkbox" name="review" class="filtro-review" value="4" id="checkbox-4" />
                     <div class="review">
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="fas fa-star" aria-hidden="true"></i>
@@ -99,8 +102,8 @@
                     </div>
                     (4)
                 </label>
-                <label>
-                    <input type="checkbox" name="review" class="filter review-filter" value="3" />
+                <label for="checkbox-3">
+                    <input type="checkbox" name="review" class="filtro-review" value="3" id="checkbox-3" />
                     <div class="review">
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="fas fa-star" aria-hidden="true"></i>
@@ -110,8 +113,8 @@
                     </div>
                     (3)
                 </label>
-                <label>
-                    <input type="checkbox" name="review" class="filter review-filter" value="2" />
+                <label for="checkbox-2">
+                    <input type="checkbox" name="review" class="filtro-review" value="2" id="checkbox-2" />
                     <div class="review">
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="fas fa-star" aria-hidden="true"></i>
@@ -121,8 +124,8 @@
                     </div>
                     (2)
                 </label>
-                <label>
-                    <input type="checkbox" name="review" class="filter review-filter" value="1" />
+                <label for="checkbox-1">
+                    <input type="checkbox" name="review" class="filtro-review" value="1" id="checkbox-1" />
                     <div class="review">
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="far fa-star" aria-hidden="true"></i>
@@ -139,36 +142,35 @@
         <section class="productos">
 
             <!-- HEADER PRODUCTOS -->
-            <div class="header-products">
-                <div class="visible-products">
-                    <p>Monstrando 12 productos de 12</p>
-                </div>
+            <div class="header-productos">
+
+                <p>Monstrando 12 producto(s) de 12</p>
+
                 <div class="ver-como">
                     <p>Ver como</p>
-                    <a href="">
+                    <button type="button">
                         <i class="fas fa-th"></i>
-                    </a>
-                    <a href="">
-                        <i class="fas fa-list-alt"></i>
-                    </a>
+                    </button>
+                    <button type="button">
+                        <i class="fas fa-list"></i>
+                    </button>
+                    <button type="button btn-filtro hidden">
+                        <i class="fas fa-filter"></i>
+                    </button>
                 </div>
             </div>
 
             <!-- CONTENEDOR PRODUCTOS -->
             <div class="contenedor-productos">
 
-                <article 
-                class="product" 
-                data-nombre="iphone" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="5">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/600" class="product-img" />
+                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
                     </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Iphone</h3>
-                        <p class="product-price">$ 22499</p>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -176,65 +178,20 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                    </div>
-                </article>
-
-                <article 
-                class="product" 
-                data-nombre="android" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="4">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/500" class="product-img" />
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Android</h3>
-                        <p class="product-price">$ 22499</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
                         </div>
                     </div>
                 </article>
 
-                <article 
-                class="product" 
-                data-nombre="samsung" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="3">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/700" class="product-img" />
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
                     </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Samsung</h3>
-                        <p class="product-price">$ 22499</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    </div>
-                </article>
-
-                <article 
-                class="product" 
-                data-nombre="iphone" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="5">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/600" class="product-img" />
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Iphone</h3>
-                        <p class="product-price">$ 22499</p>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -242,65 +199,20 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                    </div>
-                </article>
-
-                <article 
-                class="product" 
-                data-nombre="android" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="4">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/500" class="product-img" />
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Android</h3>
-                        <p class="product-price">$ 22499</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
                         </div>
                     </div>
                 </article>
 
-                <article 
-                class="product" 
-                data-nombre="samsung" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="3">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/700" class="product-img" />
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
                     </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Samsung</h3>
-                        <p class="product-price">$ 22499</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    </div>
-                </article>
-
-                <article 
-                class="product" 
-                data-nombre="iphone" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="5">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/600" class="product-img" />
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Iphone</h3>
-                        <p class="product-price">$ 22499</p>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -308,65 +220,20 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                    </div>
-                </article>
-
-                <article 
-                class="product" 
-                data-nombre="android" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="4">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/500" class="product-img" />
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Android</h3>
-                        <p class="product-price">$ 22499</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
                         </div>
                     </div>
                 </article>
 
-                <article 
-                class="product" 
-                data-nombre="samsung" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="3">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/700" class="product-img" />
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
                     </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Samsung</h3>
-                        <p class="product-price">$ 22499</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    </div>
-                </article>
-
-                <article 
-                class="product" 
-                data-nombre="iphone" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="5">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/600" class="product-img" />
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Iphone</h3>
-                        <p class="product-price">$ 22499</p>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -374,65 +241,194 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                    </div>
-                </article>
-
-                <article 
-                class="product" 
-                data-nombre="android" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="4">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/500" class="product-img" />
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Android</h3>
-                        <p class="product-price">$ 22499</p>
-                        <div class="review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
                         </div>
                     </div>
                 </article>
 
-                <article 
-                class="product" 
-                data-nombre="samsung" 
-                data-categoria="celulares" 
-                data-precio="22499"
-                data-rating="3">
-                    <div class="product-img-container">
-                        <img src="http://www.placekitten.com/700" class="product-img" />
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
                     </div>
-                    <div class="product-body">
-                        <h3 class="product-name">Celular Samsung</h3>
-                        <p class="product-price">$ 22499</p>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
                         <div class="review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                    </div>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
+                        <div class="review">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                    </div>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
+                        <div class="review">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                    </div>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
+                        <div class="review">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                    </div>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
+                        <div class="review">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                    </div>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
+                        <div class="review">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                    </div>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
+                        <div class="review">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="manos negras Chardonnay" data-categoria="blancos"
+                    data-precio="1250" data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img" />
+                    </div>
+                    <div class="info-producto">
+                        <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                        <p class="precio-producto">$ 1250</p>
+                        <div class="review">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="comprar">
+                            <button class="boton-comprar">COMPRAR</button>
                         </div>
                     </div>
                 </article>
 
             </div>
+
         </section>
+    </main>
 
-        <!-- FOOTER -->
-        <footer>
-            <div class="contenido-footer">
-                <img/>
-                <p>FRENCI SHOP - Gracias por visitarnos </p>
-            </div>
-        </footer>
+    <!-- FOOTER -->
+    <footer>
+        <div class="contenido-footer">
+            <img />
+            <p>FinestWine 🍷 - Gracias por visitarnos </p>
+        </div>
+    </footer>
 
-    <!--JS-->
+    <!--JAVASCRIPT-->
     <script src="index.js"></script>
 </body>
 
