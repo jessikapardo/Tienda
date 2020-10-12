@@ -25,6 +25,7 @@ button {
     align-items: center;
     justify-content: center;
     background-color: transparent;
+    cursor: pointer;
 }
 
 img {
@@ -67,7 +68,7 @@ img {
 } */
 
 .fa-wine-glass-alt{
-    font-size: 20px;
+    font-size: 25px;
     margin-right: 10px;
     color:#a80451;
 }
@@ -80,7 +81,7 @@ img {
 }
 
 .btn-carrito{
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 300;
 }
 
@@ -93,7 +94,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("img/banner3.jpg");
+    background-image: url("img/banner.jpg");
     min-height: 300px;
     width: 100%;
     background-size: cover;
@@ -128,7 +129,7 @@ img {
     align-items: flex-start;
     /* justify-content: flex-start; */
     width: 300px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .contenedor-filtros {
@@ -138,6 +139,10 @@ img {
 .filtros{
     display: flex;
     justify-content: space-between;
+}
+
+.fa-trash-alt{
+    margin-right: 8px;
 }
 
 .busqueda h3, .categorias h3, .puntaje h3{
@@ -166,7 +171,59 @@ img {
     align-items: center;
 }
 
+.categoria-vinos, .filtro-review{
+    margin: 4px 10px 4px 4px;
+}
+
 .puntaje label {
     display: flex;
+    align-items: center; 
+}
+
+.review{
+    margin-right: 2px;
+}
+
+.fa-star {
+    color: #fbc02d;
+}
+
+/* PRODUCTOS */
+
+.header-productos {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    background-color: #fff;
+    margin: 10px 10px;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.ver-como {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.btn-vista-grilla, .btn-vista-lista{
+    font-size: 20px;
+    margin-left: 15px;
+    padding: 0;
+}
+
+.btn-filtros-responsive{
+    font-size: 18px;
+}
+.btn-filtros-responsive p{
+    margin-left: 10px;
+    padding: 0;
+}
+
+.contenedor-productos {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
