@@ -188,9 +188,13 @@ img {
 }
 
 .fa-search {
-    position: relative;
+    /* position: relative;
     left: 180px;
     bottom: 30px;
+    font-size: 17px; */
+    position: absolute;
+    left: 200px;
+    bottom: 10px;
     font-size: 17px;
 }
 
@@ -220,6 +224,12 @@ img {
 
 
 /* PRODUCTOS */
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
 .header-productos {
     display: flex;
