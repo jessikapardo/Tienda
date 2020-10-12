@@ -17,7 +17,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #e6e7e8;
+    background-color: #f0f1f1;
+    overflow-x: hidden;
 }
 
 button {
@@ -36,6 +37,10 @@ img {
 
 .hidden {
     display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 
@@ -79,7 +84,7 @@ img {
     /* font-family: 'Yeseva One', cursive; */
     color: #2a374b;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .btn-carrito {
@@ -106,7 +111,8 @@ img {
 
 .titulo-ppal {
     font-family: 'Yeseva One', cursive;
-    color: #2a374b;
+    color: #a80451;
+    /* color: #ffffff; */
     font-size: 40px;
 }
 
@@ -208,7 +214,8 @@ img {
 }
 
 .fa-star {
-    color: #fbc02d;
+    /* color: #fbc02d; */
+    color: #c4065f;
 }
 
 
@@ -296,8 +303,44 @@ img {
     align-items: center;
 }
 
+.contenido-producto {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.nombre-producto {
+    margin-bottom: 20px;
+    /* font-size: 20px; */
+    font-weight: 500;
+}
+
+.precio-producto {
+    color: grey;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
 .descripcion-producto {
     display: none;
+}
+
+.comprar-producto {
+    padding: 20px;
+    width: 100%;
+}
+
+.btn-agregar-productos {
+    margin-top: 15px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    width: 100%;
+    min-height: 50px;
+    transition: background-color 0.3s;
+}
+
+.btn-agregar-productos:hover {
+    background-color: rgb(221, 219, 219);
 }
 
 
@@ -310,5 +353,65 @@ footer {
     width: 100%;
     padding: 40px;
     margin-top: 80px;
-    font-size: 14px;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+
+/* CARRITO */
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.carrito {
+    /* z-index: 1; */
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100vh;
+    /* padding: 20px; */
+    background-color: #f5f5f5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(400px);
+    transition: 0.5s;
+    padding: 40px 20px;
+}
+
+.mostrar-carrito {
+    transform: translate(0)
+}
+
+.carrito header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-carrito {
+    /* margin: 15px; */
+    width: 100%;
+}
+
+.btn-cerrar-carrito {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.carrito-vacio {
+    margin: 15px 0;
+}
+
+.btn-comprar-carrito {
+    background-color: green;
+}
+
+.boton-vaciar {
+    border: 1px solid red;
 }
