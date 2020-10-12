@@ -22,8 +22,7 @@
                 <p>FINESTWINE</p>
             </div>
             <div class="contenedor-carrito">
-                <button type="button" class="btn-carrito">
-                    <i class="fas fa-shopping-cart"></i>
+                <button type="button" class="btn-carrito" id="btn-carrito">
                     <p>Carrito (<span>0</span> items)</p>
                 </button>
             </div>
@@ -490,12 +489,12 @@
 
     <!-- CARRITO -->
 
-    <div class="overlay" id="overlay"></div>
+    <div class="overlay hidden" id="overlay"></div>
 
-    <aside class="carrito mostrar-carrito" id="carrito" aria-hidden="false">
+    <aside class="carrito" id="carrito" aria-hidden="false">
         <header>
             <h2 class="titulo-carrito">Carrito</h2>
-            <button class="btn-cerrar-carrito"><i class="fas fa-times"></i></button>
+            <button class="btn-cerrar-carrito" id="btn-cerrar-carrito"><i class="fas fa-times"></i></button>
         </header>
 
         <div class="carrito-vacio">
