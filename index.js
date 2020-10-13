@@ -1,8 +1,9 @@
 // FILTROS //////////////////////
-const productos = document.querySelectorAll('.producto');
-const filtroBusqueda = document.querySelector('#busqueda-filtro');
+const productos = document.querySelectorAll(".producto");
+const filtroBusqueda = document.querySelector("#busqueda-filtro");
 const filtroCategoria = document.querySelectorAll(".categoria-vinos");
 const filtroPuntaje = document.querySelectorAll(".filtro-review");
+const botonLimpiarFiltros = document.querySelector("#limpiar-filtros")
 
 // ABRIR Y CERRAR CARRITO /////////////////////////
 const botonAbrirCarrito = document.getElementById("btn-carrito")
@@ -176,5 +177,20 @@ const pasaFiltros = (producto) => {
         return true
     } else {
         return false
+    }
+}
+
+// Boton borrar filtros
+
+botonLimpiarFiltros.onclick = () => {
+    filtroBusqueda.value = ""
+    for (let categoria of filtroCategoria) {
+        categoria.checked = false
+    }
+    for (let puntaje of filtroPuntaje) {
+        puntaje.checked = false
+    }
+    for (let producto of productos) {
+        producto.classList.remove('hidden')
     }
 }
