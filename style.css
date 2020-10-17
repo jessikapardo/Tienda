@@ -35,10 +35,6 @@ img {
     height: auto;
 }
 
-.hidden {
-    display: none;
-}
-
 .no-scroll {
     overflow: hidden;
 }
@@ -67,12 +63,6 @@ img {
     display: flex;
     align-items: center;
 }
-
-
-/* .logo {
-    width: 25px;
-    margin-right: 10px;
-} */
 
 .fa-wine-glass-alt {
     font-size: 25px;
@@ -111,8 +101,7 @@ img {
 
 .titulo-ppal {
     font-family: 'Yeseva One', cursive;
-    /* color: #a80451; */
-    color: #ffffff;
+    color: #a80451;
     font-size: 40px;
 }
 
@@ -141,7 +130,6 @@ img {
 .filtros-gral {
     flex-direction: column;
     align-items: flex-start;
-    /* justify-content: flex-start; */
     width: 300px;
     font-size: 14px;
 }
@@ -171,6 +159,11 @@ img {
     margin-right: 8px;
 }
 
+
+/* .busqueda{
+    position: relative;
+} */
+
 .busqueda h3,
 .categorias h3,
 .puntaje h3 {
@@ -188,13 +181,12 @@ img {
 }
 
 .fa-search {
-    /* position: relative;
-    left: 180px;
-    bottom: 30px;
-    font-size: 17px; */
-    position: absolute;
-    left: 200px;
-    bottom: 10px;
+    /* position: absolute;
+    right: 40px;
+    top: 50px; */
+    position: relative;
+    left: 170px;
+    bottom: 28px;
     font-size: 17px;
 }
 
@@ -218,7 +210,6 @@ img {
 }
 
 .fa-star {
-    /* color: #fbc02d; */
     color: #c4065f;
 }
 
@@ -286,6 +277,38 @@ img {
     transition: 0.5s;
 }
 
+.lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista .producto {
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+}
+
+.lista .producto .contenido-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.lista .producto .producto-img-container {
+    margin: 0 20px;
+    width: 350px;
+}
+
+.lista .descripcion-producto {
+    display: block;
+    margin: 0 0 15px 0;
+}
+
+.lista button {
+    max-width: 200px;
+}
+
 .producto:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -305,12 +328,7 @@ img {
 
 .producto-img:hover {
     transform: scale(1.5);
-}
-
-.info-producto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    opacity: 0.8;
 }
 
 .contenido-producto {
@@ -320,8 +338,7 @@ img {
 }
 
 .nombre-producto {
-    margin-bottom: 20px;
-    /* font-size: 20px; */
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -530,4 +547,11 @@ footer {
 .btn-vaciar-carrito:hover {
     color: white;
     background-color: #e92005;
+}
+
+
+/* HIDDEN */
+
+.hidden {
+    display: none;
 }

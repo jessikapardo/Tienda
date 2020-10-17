@@ -1,3 +1,14 @@
+// ABRIR Y CERRAR CARRITO /////////////////////////
+const botonAbrirCarrito = document.getElementById("btn-carrito")
+const botonCerrarCarrito = document.getElementById("btn-cerrar-carrito")
+const carrito = document.getElementById("carrito")
+const overlay = document.getElementById("overlay")
+
+// PRODUCTOS EN LISTA O GRILLA//////////////////
+const contenedorProductos = document.querySelector(".contenedor-productos")
+const botonLista = document.querySelector(".btn-lista")
+const botonGrilla = document.querySelector(".btn-grilla")
+
 // FILTROS //////////////////////
 const productos = document.querySelectorAll(".producto");
 const filtroBusqueda = document.querySelector("#busqueda-filtro");
@@ -5,11 +16,6 @@ const filtroCategoria = document.querySelectorAll(".categoria-vinos");
 const filtroPuntaje = document.querySelectorAll(".filtro-review");
 const botonLimpiarFiltros = document.querySelector("#limpiar-filtros")
 
-// ABRIR Y CERRAR CARRITO /////////////////////////
-const botonAbrirCarrito = document.getElementById("btn-carrito")
-const botonCerrarCarrito = document.getElementById("btn-cerrar-carrito")
-const carrito = document.getElementById("carrito")
-const overlay = document.getElementById("overlay")
 
 
 ///////////////// ABRIR Y CERRAR CARRITO /////////////////////////
@@ -28,6 +34,23 @@ botonCerrarCarrito.onclick = () => {
     carrito.classList.remove("mostrar-carrito")
 }
 
+
+///////////////// PRODUCTOS EN LISTA O GRILLA /////////////////////////
+
+// Productos en lista
+botonLista.onclick = () => {
+    console.log("boton lista")
+    contenedorProductos.classList.add("lista")
+        // contenedorProductos.classList.remove("grilla")
+}
+
+// Productos en grilla
+botonGrilla.onclick = () => {
+    // contenedorProductos.classList.add("grilla")
+    contenedorProductos.classList.remove("lista")
+}
+
+
 ///////////////// FILTROS /////////////////////////////////
 
 // Ocultar y mostrar tarjeta producto
@@ -43,7 +66,6 @@ const mostrarTarjeta = (producto) => {
 // eventos
 filtroBusqueda.oninput = () => {
     filtrarTarjetas()
-
 }
 
 for (let categoria of filtroCategoria) {
@@ -131,7 +153,7 @@ const compararCategoriaConTarjeta = (producto) => {
     return false
 }
 
-// ver si el producto para el filtro de la busqueda
+// ver si el producto pasa el filtro de la busqueda
 const pasaFiltroInput = (producto) => {
     if (hayAlgoEscritoEnElInput()) {
         if (compararInputConTarjeta(producto)) {
@@ -180,7 +202,7 @@ const pasaFiltros = (producto) => {
     }
 }
 
-// Boton borrar filtros
+// Limpiar todos los filtros
 
 botonLimpiarFiltros.onclick = () => {
     filtroBusqueda.value = ""
