@@ -9,6 +9,12 @@ const contenedorProductos = document.querySelector(".contenedor-productos")
 const botonLista = document.querySelector(".btn-lista")
 const botonGrilla = document.querySelector(".btn-grilla")
 
+// ABRIR Y CERRAR CHECKOUT/////////////////////
+const botonAbrirCheckout = document.querySelector(".btn-comprar-carrito")
+const botonCerrarCheckout = document.querySelector(".btn-seguir-comprando")
+const checkout = document.getElementById("checkout")
+const overlayCheckout = document.getElementById("overlay-checkout")
+
 // FILTROS //////////////////////
 const productos = document.querySelectorAll(".producto");
 const filtroBusqueda = document.querySelector("#busqueda-filtro");
@@ -50,6 +56,22 @@ botonGrilla.onclick = () => {
     contenedorProductos.classList.remove("lista")
 }
 
+
+///////////////// ABRIR Y CERRAR CHECKOUT /////////////////////////
+
+// Abrir carrito
+botonAbrirCheckout.onclick = () => {
+    overlayCheckout.classList.remove("hidden")
+    document.body.classList.add("no-scroll")
+    checkout.classList.remove("hidden")
+}
+
+// Cerrar carrito
+botonCerrarCheckout.onclick = () => {
+    overlayCheckout.classList.add("hidden")
+    document.body.classList.remove("no-scroll")
+    checkout.classList.add("hidden")
+}
 
 ///////////////// FILTROS /////////////////////////////////
 

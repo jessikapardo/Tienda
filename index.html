@@ -521,7 +521,7 @@
                         </div>
                         <div class="producto-carrito-precio-cant">
                             <label for="cantidad">
-                                <input class="cantidad" type="number">
+                                <input class="cantidad" type="number" value="1">
                                 Unidades
                             </label>
                             <p class="producto-precio-carrito">x $1250</p>
@@ -540,7 +540,7 @@
                         </div>
                         <div class="producto-carrito-precio-cant">
                             <label for="cantidad">
-                                <input class="cantidad" type="number">
+                                <input class="cantidad" type="number" value="1">
                                 Unidades
                             </label>
                             <p class="producto-precio-carrito">x $1250</p>
@@ -557,6 +557,94 @@
             <button class="btn-vaciar-carrito" aria-label="Boton vaciar carrito">VACIAR</button>
         </div>
     </aside>
+
+    <!-- OVERLAY-CHECKOUT -->
+    <div class="overlay-checkout hidden" id="overlay-checkout">
+
+        <!-- CHECKOUT -->
+        <div class="checkout hidden" id="checkout">
+            <section class="seccion-checkout">
+                <h2>Checkout</h2>
+                <div class="contenedor-checkout">
+                    <!-- Checkout info -->
+                    <div class="contenedor-checkout-info">
+                        <form class="form-datos-personales">
+                            <!-- Form datos personales -->
+                            <div class="contenedor-datos-personales">
+                                <h3>Datos Personales</h3>
+                                <div class="datos-personales">
+                                    <label for="nombre-apellido">
+                                        Nombre y Apellido*
+                                        <input type="text" id="nombre-apellido" placeholder="p. ej.: Ada Lovelace"
+                                            required />
+                                    </label>
+                                    <label for="email">
+                                        Email*
+                                        <input type="email" id="email" placeholder="p. ej.: ada.lovelace@gmail.com"
+                                            required />
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Form métodos pago -->
+                            <div class="contenedor-metodos-pago">
+                                <h3>Opciones de Pago</h3>
+                                <div class="metodos-pago">
+                                    <label for="pago-efectivo">
+                                        <input type="radio" id="pago-efectivo" name="pago" value="Efectivo / Débito" />
+                                        Efectivo / Débito
+                                    </label>
+                                    <label for="pago-credito">
+                                        <input type="radio" id="pago-credito" name="pago" value="Tarjeta de crédito" />
+                                        Tarjeta de crédito
+                                    </label>
+                                    <label for="envio">
+                                        <input type="checkbox" id="envio" name="envio" />
+                                        Necesito envío
+                                    </label>
+                                    <label for="descuento">
+                                        <input type="checkbox" id="descuento" name="descuento" />
+                                        Tengo tarjeta de descuento
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Checkout resumen -->
+                    <section class="contenedor-checkout-resumen">
+                        <h3>Resumen</h3>
+                        <div class="checkout-resumen">
+                            <p class="subtotal-resumen">
+                                Subtotal
+                                <span class="valor-subtotal">$</span>
+                            </p>
+                            <p class="descuento">
+                                Descuento 10%
+                                <span class="valor-descuento">$</span>
+                            </p>
+                            <p class="envio">
+                                Envío
+                                <span class="valor-envio">$</span>
+                            </p>
+                            <p class="recargo">
+                                Recargo
+                                <span class="valor-recargo">$ 300</span>
+                            </p>
+                            <p class="total">
+                                <span class="valor-total">$</span>
+                            </p>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="botones-checkout">
+                    <button class="btn-seguir-comprando">SEGUIR COMPRANDO</button>
+                    <button class="btn-finalizar">FINALIZAR</button>
+                </div>
+            </section>
+        </div>
+
+    </div>
 
     <!--JAVASCRIPT-->
     <script src="index.js"></script>
