@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
-    <title>FINESTWINE</title>
+    <title>THE WINE SIDE</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <nav class="nav-ppal">
             <div class="contenedor-logo">
                 <i class="fas fa-wine-glass-alt" aria-hidden="true"></i>
-                <p>FINESTWINE</p>
+                <p>THE WINE SIDE</p>
             </div>
             <div class="contenedor-carrito">
                 <button type="button" class="btn-carrito" id="btn-carrito" aria-label="Abrir Carrito">
@@ -45,6 +45,7 @@
             <button type="button" class="btn-cerrar-filtros" aria-label="Cerrar filtros">
                 <i class="fas fa-times" aria-hidden="true"></i>
             </button>
+            
             <div class="contenedor-filtros">
                 <div class="filtros">
                     <h2>FILTROS</h2>
@@ -156,14 +157,14 @@
             <!-- HEADER PRODUCTOS -->
             <header class="header-productos">
 
-                <p>Mostrando 12 producto(s) de 12</p>
+                <p class="cant-productos-mostrados" aria-live="polite">Mostrando 12 producto(s) de 12</p>
 
                 <div class="ver-como">
                     <p>Ver como</p>
-                    <button type="button" class="btn-grilla" aria-label="Ver como grilla">
+                    <button type="button" class="btn-grilla" aria-label="Mostrar productos como grilla">
                         <i class="fas fa-th" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="btn-lista" aria-label="Ver como lista">
+                    <button type="button" class="btn-lista" aria-label="Mostrar productos como lista">
                         <i class="fas fa-list" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -176,19 +177,250 @@
             <!-- CONTENEDOR PRODUCTOS -->
             <div class="contenedor-productos">
 
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos" data-precio="1250" data-rating="5">
+                <article class="producto" data-nombre="via revolucionaria criolla" data-categoria="tintos"
+                    data-precio="850" data-rating="4">
                     <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
+                        <img src="img/via-revo-criolla.png" class="producto-img"
+                            alt="Vino tinto criolla Via Revolucionaria" />
+                    </div>
+                    <div class="info-producto">
+                        <div class="contenido-producto">
+                            <h3 class="nombre-producto">Via Revolucionaria Criolla</h3>
+                            <p class="precio-producto">$ 850</p>
+                            <p class="descripcion-producto">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="comprar-producto">
+                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="cara sucia blend" data-categoria="tintos" data-precio="550"
+                    data-rating="3">
+                    <div class="producto-img-container">
+                        <img src="img/cara-sucia-tinto.png" class="producto-img" alt="Vino tinto blend Cara Sucia" />
+                    </div>
+                    <div class="info-producto">
+                        <div class="contenido-producto">
+                            <h3 class="nombre-producto">Cara Sucia Blend</h3>
+                            <p class="precio-producto">$ 550</p>
+                            <p class="descripcion-producto">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="comprar-producto">
+                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos"
+                    data-precio="450" data-rating="4">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-chardonnay.png" class="producto-img"
+                            alt="Vino blanco chardonnay Manos negras" />
                     </div>
                     <div class="info-producto">
                         <div class="contenido-producto">
                             <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
+                            <p class="precio-producto">$ 450</p>
+                            <p class="descripcion-producto">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="comprar-producto">
+                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="pielihueso naranjo" data-categoria="naranjos" data-precio="1250"
+                    data-rating="5">
+                    <div class="producto-img-container">
+                        <img src="img/piel-hueso-naranjo.png" class="producto-img" alt="Vino naranjo Pielihueso" />
+                    </div>
+                    <div class="info-producto">
+                        <div class="contenido-producto">
+                            <h3 class="nombre-producto">Pielihueso Naranjo</h3>
                             <p class="precio-producto">$ 1250</p>
                             <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
                             </p>
                             <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="comprar-producto">
+                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="burro malbec" data-categoria="tintos" data-precio="500"
+                    data-rating="2">
+                    <div class="producto-img-container">
+                        <img src="img/burro-malbec.png" class="producto-img" alt="Vino tinto El Burro Malbec" />
+                    </div>
+                    <div class="info-producto">
+                        <div class="contenido-producto">
+                            <h3 class="nombre-producto">El Burro Malbec</h3>
+                            <p class="precio-producto">$ 500</p>
+                            <p class="descripcion-producto">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="comprar-producto">
+                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="animal jardin enchante" data-categoria="rosados"
+                    data-precio="450" data-rating="4">
+                    <div class="producto-img-container">
+                        <img src="img/jardin-echante.png" class="producto-img"
+                            alt="Vino rosado Animal Jardín Enchante" />
+                    </div>
+                    <div class="info-producto">
+                        <div class="contenido-producto">
+                            <h3 class="nombre-producto">Animal Jardín Enchante</h3>
+                            <p class="precio-producto">$ 450</p>
+                            <p class="descripcion-producto">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="comprar-producto">
+                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="perro callejero malbec" data-categoria="tintos" data-precio="850"
+                    data-rating="3">
+                    <div class="producto-img-container">
+                        <img src="img/perro-malbec.png" class="producto-img" alt="Vino tinto malbec Perro Callejero" />
+                    </div>
+                    <div class="info-producto">
+                        <div class="contenido-producto">
+                            <h3 class="nombre-producto">Perro Callejero Malbec</h3>
+                            <p class="precio-producto">$ 850</p>
+                            <p class="descripcion-producto">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="comprar-producto">
+                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="traslapiedra chardonnay" data-categoria="blancos"
+                    data-precio="850" data-rating="4">
+                    <div class="producto-img-container">
+                        <img src="img/tras-piedra-chardonnay.png" class="producto-img"
+                            alt="Vino blanco chardonnay Traslapiedra" />
+                    </div>
+                    <div class="info-producto">
+                        <div class="contenido-producto">
+                            <h3 class="nombre-producto">Traslapiedra Chardonnay</h3>
+                            <p class="precio-producto">$ 850</p>
+                            <p class="descripcion-producto">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="comprar-producto">
+                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="her rose" data-categoria="rosados" data-precio="850"
+                    data-rating="1">
+                    <div class="producto-img-container">
+                        <img src="img/heyrose.png" class="producto-img" alt="Vino rosado Hey Rose" />
+                    </div>
+                    <div class="info-producto">
+                        <div class="contenido-producto">
+                            <h3 class="nombre-producto">Hey Rose</h3>
+                            <p class="precio-producto">$ 850</p>
+                            <p class="descripcion-producto">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
@@ -201,20 +433,53 @@
                     </div>
                 </article>
 
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="tintos" data-precio="950" data-rating="3">
+                <article class="producto" data-nombre="via revolucionaria naranjo" data-categoria="naranjos"
+                    data-precio="1560" data-rating="4">
                     <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
+                        <img src="img/via-revo-naranjo.png" class="producto-img"
+                            alt="Vino naranjo Via Revolucionaria" />
                     </div>
                     <div class="info-producto">
                         <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 950</p>
+                            <h3 class="nombre-producto">Via Revolucionaria Naranjo</h3>
+                            <p class="precio-producto">$ 1560</p>
                             <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
                             </p>
                             <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="comprar-producto">
+                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="manos negra malbec" data-categoria="tintos" data-precio="650"
+                    data-rating="2">
+                    <div class="producto-img-container">
+                        <img src="img/manos-negras-malbec.png" class="producto-img"
+                            alt="Vino tinto malbec Manos Negras" />
+                    </div>
+                    <div class="info-producto">
+                        <div class="contenido-producto">
+                            <h3 class="nombre-producto">Manos Negras Malbec</h3>
+                            <p class="precio-producto">$ 650</p>
+                            <p class="descripcion-producto">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
@@ -226,248 +491,27 @@
                     </div>
                 </article>
 
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="naranjos" data-precio="750" data-rating="4">
+                <article class="producto" data-nombre="hippie love criolla" data-categoria="tintos" data-precio="400"
+                    data-rating="5">
                     <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
+                        <img src="img/hippie-love-criolla.png" class="producto-img"
+                            alt="Vino tinto criolla Hippie Love" />
                     </div>
                     <div class="info-producto">
                         <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 750</p>
+                            <h3 class="nombre-producto">Hippie Love Criolla</h3>
+                            <p class="precio-producto">$ 400</p>
                             <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus
+                                velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis
+                                aliquam ut architecto repellendus itaque.
                             </p>
                             <div class="review">
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="comprar-producto">
-                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos" data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
-                    </div>
-                    <div class="info-producto">
-                        <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 1250</p>
-                            <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
-                            </p>
-                            <div class="review">
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="comprar-producto">
-                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos" data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
-                    </div>
-                    <div class="info-producto">
-                        <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 1250</p>
-                            <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
-                            </p>
-                            <div class="review">
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="comprar-producto">
-                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos" data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
-                    </div>
-                    <div class="info-producto">
-                        <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 1250</p>
-                            <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
-                            </p>
-                            <div class="review">
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="comprar-producto">
-                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos" data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
-                    </div>
-                    <div class="info-producto">
-                        <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 1250</p>
-                            <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
-                            </p>
-                            <div class="review">
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="comprar-producto">
-                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos" data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
-                    </div>
-                    <div class="info-producto">
-                        <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 1250</p>
-                            <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
-                            </p>
-                            <div class="review">
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="comprar-producto">
-                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos" data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
-                    </div>
-                    <div class="info-producto">
-                        <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 1250</p>
-                            <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
-                            </p>
-                            <div class="review">
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="comprar-producto">
-                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos" data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
-                    </div>
-                    <div class="info-producto">
-                        <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 1250</p>
-                            <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
-                            </p>
-                            <div class="review">
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="comprar-producto">
-                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos" data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
-                    </div>
-                    <div class="info-producto">
-                        <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 1250</p>
-                            <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
-                            </p>
-                            <div class="review">
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="comprar-producto">
-                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="producto" data-nombre="manos negras chardonnay" data-categoria="blancos" data-precio="1250" data-rating="5">
-                    <div class="producto-img-container">
-                        <img src="img/manos-negras-chardonnay.png" class="producto-img" alt="Vino blanco chardonnay Manos negras" />
-                    </div>
-                    <div class="info-producto">
-                        <div class="contenido-producto">
-                            <h3 class="nombre-producto">Manos Negras Chardonnay</h3>
-                            <p class="precio-producto">$ 1250</p>
-                            <p class="descripcion-producto">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio ducimus velit error soluta impedit cum, eius sunt ab totam expedita nulla libero aperiam facilis aliquam ut architecto repellendus itaque.
-                            </p>
-                            <div class="review">
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="comprar-producto">
@@ -484,7 +528,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="contenido-footer">
-            <p>FINESTWINE 🍷 Gracias por visitarnos </p>
+            <p>THE WINE SIDE - Hecho con muchas 🍷 de por medio </p>
         </div>
     </footer>
 
@@ -492,7 +536,7 @@
     <div class="overlay hidden" id="overlay"></div>
 
     <!-- CARRITO -->
-    <aside class="carrito" id="carrito" aria-hidden="false">
+    <aside class="carrito" id="carrito" aria-hidden="false" aria-modal="true">
         <!-- HEADER CARRITO -->
         <header>
             <h2 class="titulo-carrito">Carrito</h2>
@@ -511,11 +555,13 @@
             <p>1 producto(s) agregado(s)</p>
             <div class="productos-agregados">
                 <article class="producto-agregado">
-                    <img class="producto-carrito-img" src="img/manos-negras-chardonnay.png" alt="Botella vino blanco chardonnay Manos Negras">
+                    <img class="producto-carrito-img" src="img/manos-negras-chardonnay.png"
+                        alt="Botella vino blanco chardonnay Manos Negras">
                     <div class="producto-carrito-contenido">
                         <div class="producto-carrito-info">
                             <h3>Manos Negras Chardonnay</h3>
-                            <button type="button" class="btn-borrar-producto-carrito" aria-label="Eliminar producto carrito">
+                            <button type="button" class="btn-borrar-producto-carrito"
+                                aria-label="Eliminar producto carrito">
                                 <i class="far fa-trash-alt" aria-hidden="true"></i>
                             </button>
                         </div>
@@ -530,11 +576,13 @@
                 </article>
 
                 <article class="producto-agregado">
-                    <img class="producto-carrito-img" src="img/tras-piedra-chardonnay.png" alt="Botella vino blanco chardonnay Traslapiedra">
+                    <img class="producto-carrito-img" src="img/tras-piedra-chardonnay.png"
+                        alt="Botella vino blanco chardonnay Traslapiedra">
                     <div class="producto-carrito-contenido">
                         <div class="producto-carrito-info">
                             <h3>Traslapiedra Chardonnay </h3>
-                            <button type="button" class="btn-borrar-producto-carrito" aria-label="Eliminar producto carrito">
+                            <button type="button" class="btn-borrar-producto-carrito"
+                                aria-label="Eliminar producto carrito">
                                 <i class="far fa-trash-alt" aria-hidden="true"></i>
                             </button>
                         </div>
@@ -644,6 +692,7 @@
             </section>
         </div>
 
+       
     </div>
 
     <!--JAVASCRIPT-->

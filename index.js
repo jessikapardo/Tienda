@@ -45,9 +45,8 @@ botonCerrarCarrito.onclick = () => {
 
 // Productos en lista
 botonLista.onclick = () => {
-    console.log("boton lista")
     contenedorProductos.classList.add("lista")
-        // contenedorProductos.classList.remove("grilla")
+    // contenedorProductos.classList.remove("grilla")
 }
 
 // Productos en grilla
