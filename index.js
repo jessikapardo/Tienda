@@ -91,14 +91,14 @@ botonGrilla.onclick = () => {
 // Abrir checkout
 botonAbrirCheckout.onclick = () => {
     overlayCheckout.classList.remove("hidden")
-    // document.body.classList.add("no-scroll")
+    document.body.classList.remove("no-scroll")
     checkout.classList.remove("hidden")
 }
 
 // Cerrar checkout
 botonCerrarCheckout.onclick = () => {
     overlayCheckout.classList.add("hidden")
-    // document.body.classList.remove("no-scroll")
+    document.body.classList.add("no-scroll")
     checkout.classList.add("hidden")
 }
 
