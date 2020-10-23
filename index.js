@@ -32,6 +32,7 @@ const filtroCategoria = document.querySelectorAll(".categoria-vinos");
 const filtroPuntaje = document.querySelectorAll(".filtro-review");
 const botonLimpiarFiltros = document.querySelector("#limpiar-filtros")
 
+
 // CALCULOS CHECKOUT /////////////////////
 const mostrarSubtotal = document.querySelector(".valor-subtotal")
 const mostrarDescuento = document.querySelector(".valor-descuento")
@@ -294,6 +295,25 @@ botonLimpiarFiltros.onclick = () => {
     }
 }
 
+/////////////////// FILTROS RESPONSIVE ////////////////////
+// Filtros en responsive
+const abrirFiltros = document.querySelector(".btn-filtros-responsive")
+const cerrarFiltros = document.querySelector(".btn-cerrar-filtros")
+const filtros = document.querySelector(".filtros-gral")
+// Abrir filtros
+abrirFiltros.onclick = () => {
+    overlay.classList.remove("hidden")
+    document.body.classList.add("no-scroll")
+    filtros.classList.add("mostrar-filtros")
+}
+
+
+// Cerrar filtros
+cerrarFiltros.onclick = () => {
+    overlay.classList.add("hidden")
+    document.body.classList.remove("no-scroll")
+    filtros.classList.remove("mostrar-filtros")
+}
 
 ///////////////// CALCULOS CHECKOUT /////////////////////////////////
 
@@ -316,7 +336,6 @@ const obtenerDescuento = (subtotal) => {
     return subtotal - descuento
     
 }
-
 
 radioEfectivo.oninput = () => {
     mostrarSubtotal.textContent = subtotal
@@ -360,7 +379,3 @@ const obtenerTotal = (subtotal) => {
     return subtotal + descuento + recargo + gastosDeEnvio
 }
 
-const form = document.querySelector(".form-datos-personales")
-form.onsubmit = (e) => {
-    e.preventDefault();
-}

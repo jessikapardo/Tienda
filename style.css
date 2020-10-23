@@ -38,7 +38,7 @@ img {
     overflow: hidden;
 }
 
-/* HEADER */
+/*////////////// HEADER ////////////////////*/
 
 .header {
     width: 100%;
@@ -90,7 +90,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("img/banner3.jpg");
+    background-image: url("img/banner.jpg");
     min-height: 300px;
     width: 100%;
     background-size: cover;
@@ -104,18 +104,17 @@ img {
     font-size: 40px;
 }
 
-/* MAIN */
+/*////////////// MAIN ////////////////////*/
 
 .contenedor-gral {
     display: flex;
     flex-grow: 1;
-    /* align-content: center; */
     max-width: 1400px;
     width: 100%;
     margin-top: 80px;
 }
 
-/* ASIDE */
+/*////////////// ASIDE  ////////////////////*/
 
 .contenedor-filtros, .busqueda, .categorias, .puntaje {
     padding: 0 35px 15px;
@@ -131,8 +130,8 @@ img {
 .btn-cerrar-filtros {
     display: none;
     position: absolute;
-    left: 210px;
-    bottom: 42px;
+    top: 20px;
+    right: 20px;
     font-size: 20px;
 }
 
@@ -199,7 +198,7 @@ img {
     color: #c4065f;
 }
 
-/* PRODUCTOS */
+/*////////////// PRODUCTOS ////////////////////*/
 
 .productos {
     display: flex;
@@ -354,18 +353,7 @@ img {
     background-color: rgb(221, 219, 219);
 }
 
-/* FOOTER */
-
-/* footer {
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-    width: 100%;
-    padding: 40px;
-    margin-top: 80px;
-    font-size: 17px;
-    font-weight: lighter;
-} */
+/*////////////// FOOTER ////////////////////*/
 
 footer {
     display: flex;
@@ -391,7 +379,7 @@ footer {
     color: white;
 }
 
-/* CARRITO */
+/*////////////// CARRITO  ////////////////////*/
 
 .overlay {
     width: 100vw;
@@ -440,11 +428,8 @@ footer {
 }
 
 .carrito-con-productos {
-    /* display: flex;
-    flex-direction: column; */
     overflow-y: scroll;
     flex-grow: 1;
-    /* width: 100%; */
 }
 
 .carrito-con-productos p {
@@ -497,7 +482,7 @@ footer {
     margin-right: 10px;
 }
 
-.producto-carrito-precio-cant label{
+.producto-carrito-precio-cant label {
     font-weight: 300;
 }
 
@@ -542,7 +527,7 @@ footer {
     background-color: #e92005;
 }
 
-/* CHECKOUT */
+/*////////////// CHECKOUT  ////////////////////*/
 
 .overlay-checkout {
     width: 100vw;
@@ -673,7 +658,7 @@ footer {
     max-width: 200px;
 }
 
-/* MODAL VACIAR CARRITO */
+/*////////////// MODAL VACIAR CARRITO  ////////////////////*/
 
 .modal {
     width: 100%;
@@ -689,11 +674,10 @@ footer {
     text-align: center;
 }
 
-.botones-modal{
+.botones-modal {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
-    
 }
 
 .btn-modal {
@@ -702,7 +686,7 @@ footer {
 }
 
 .btn-modal-vaciar {
-    background-color:#e92005;
+    background-color: #e92005;
     color: white;
     border-radius: 5px;
     width: 100%;
@@ -710,11 +694,72 @@ footer {
     transition: background-color 0.3s;
 }
 
-.btn-modal-vaciar:hover{
-    background-color:#c01a04;
+.btn-modal-vaciar:hover {
+    background-color: #c01a04;
 }
 
-/* HIDDEN */
+/*////////////// RESPONSIVE  ////////////////////*/
+
+@media (max-width: 850px) {
+    
+    /* Filtros */
+    .btn-cerrar-filtros{
+        display: block;
+    }
+
+    .filtros-gral {
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index:2;
+        padding: 40px 0;
+        transform: translateX(100%);
+        transition: 0.3s;
+        background-color: #fff;
+    }
+
+    .mostrar-filtros {
+        transform: translateX(0%);
+    }
+
+    .btn-filtros-responsive {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .ver-como {
+        display: none;
+    }
+
+    .seccion-checkout, .modal {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        min-height: 100%;
+        border-radius: 0;
+        min-width: auto;
+    }
+
+    .contenedor-checkout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mensaje-modal{
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+/*////////////// HIDDEN  ////////////////////*/
 
 .hidden {
     display: none;
