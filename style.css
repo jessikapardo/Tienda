@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Yeseva+One&display=swap');
-
 /* font-family: 'Roboto', sans-serif;
 font-family: 'Yeseva One', cursive; */
 
@@ -39,7 +38,6 @@ img {
     overflow: hidden;
 }
 
-
 /* HEADER */
 
 .header {
@@ -47,7 +45,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:  #a80451;
+    background-color: #a80451;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -68,11 +66,11 @@ img {
 .fa-wine-glass-alt {
     font-size: 25px;
     margin-right: 10px;
-    color:white;
+    color: white;
 }
 
 .contenedor-logo p {
-    color:white;
+    color: white;
     font-size: 20px;
     font-weight: 300;
 }
@@ -92,7 +90,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("img/banner.jpg");
+    background-image: url("img/banner3.jpg");
     min-height: 300px;
     width: 100%;
     background-size: cover;
@@ -106,7 +104,6 @@ img {
     font-size: 40px;
 }
 
-
 /* MAIN */
 
 .contenedor-gral {
@@ -118,13 +115,9 @@ img {
     margin-top: 80px;
 }
 
-
 /* ASIDE */
 
-.contenedor-filtros,
-.busqueda,
-.categorias,
-.puntaje {
+.contenedor-filtros, .busqueda, .categorias, .puntaje {
     padding: 0 35px 15px;
 }
 
@@ -160,9 +153,7 @@ img {
     margin-right: 8px;
 }
 
-.busqueda h3,
-.categorias h3,
-.puntaje h3 {
+.busqueda h3, .categorias h3, .puntaje h3 {
     margin: 14px 0;
 }
 
@@ -191,8 +182,7 @@ img {
     align-items: center;
 }
 
-.categoria-vinos,
-.filtro-review {
+.categoria-vinos, .filtro-review {
     margin: 4px 10px 4px 4px;
 }
 
@@ -208,7 +198,6 @@ img {
 .fa-star {
     color: #c4065f;
 }
-
 
 /* PRODUCTOS */
 
@@ -235,8 +224,7 @@ img {
     font-size: 14px;
 }
 
-.btn-vista-grilla,
-.btn-vista-lista {
+.btn-vista-grilla, .btn-vista-lista {
     font-size: 20px;
     margin-left: 15px;
     padding: 0;
@@ -263,7 +251,7 @@ img {
     flex-grow: 1;
 }
 
-.producto{
+.producto {
     background-color: #fff;
     margin: 10px;
     padding: 30px 25px;
@@ -273,35 +261,35 @@ img {
     transition: 0.5s;
 }
 
-.lista{
+.lista {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
-.lista .producto{
+.lista .producto {
     display: flex;
     align-items: flex-start;
     width: auto;
 }
 
-.lista .producto .contenido-producto{
+.lista .producto .contenido-producto {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
 }
 
-.lista .producto .producto-img-container{
+.lista .producto .producto-img-container {
     margin: 0 20px;
-    width: 350px;    
+    width: 350px;
 }
 
-.lista .descripcion-producto{
+.lista .descripcion-producto {
     display: block;
     margin: 0 0 15px 0;
 }
 
-.lista button{
+.lista button {
     max-width: 200px;
 }
 
@@ -366,9 +354,7 @@ img {
     background-color: rgb(221, 219, 219);
 }
 
-
 /* FOOTER */
-
 
 /* footer {
     display: flex;
@@ -405,7 +391,6 @@ footer {
     color: white;
 }
 
-
 /* CARRITO */
 
 .overlay {
@@ -415,7 +400,6 @@ footer {
     position: fixed;
     top: 0;
     bottom: 0;
-    
 }
 
 .carrito {
@@ -456,14 +440,15 @@ footer {
 }
 
 .carrito-con-productos {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     overflow-y: scroll;
-    width: 100%;
+    flex-grow: 1;
+    /* width: 100%; */
 }
 
 .carrito-con-productos p {
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .productos-agregados {
@@ -474,6 +459,10 @@ footer {
     display: flex;
     padding: 15px 0;
     border-bottom: 1px solid #e9e8e8;
+}
+
+.producto-agregado:last-of-type {
+    border: 0;
 }
 
 .producto-carrito-img {
@@ -504,6 +493,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: 10px;
 }
 
 .cantidad {
@@ -550,18 +540,16 @@ footer {
 /* CHECKOUT */
 
 .overlay-checkout {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
-    left: 0;
+    bottom: 0;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    overflow: auto;
-    z-index: 3;
 }
 
 .seccion-checkout {
@@ -570,16 +558,118 @@ footer {
     padding: 40px 30px;
     max-width: 500px;
     min-width: 800px;
+    border-radius: 5px;
 }
 
-.contenedor-checkout{
+.contenedor-checkout {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
 }
-    
+
+.form-datos-personales {
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.contenedor-datos-personales h3 {
+    margin: 25px 0;
+}
+
+.datos-personales {
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 20px 0 30px 0;
+}
+
+.datos-personales label {
+    margin-top: 30px;
+}
+
+.datos-personales input {
+    margin: 10px 0 15px;
+    display: block;
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    max-width: 300px;
+    border: 0;
+    border-bottom: 1px solid rgb(134, 134, 134);
+}
+
+.contenedor-metodos-pago {
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.contenedor-metodos-pago h3 {
+    margin: 20px 0;
+}
+
+.metodos-pago {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.metodos-pago label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.metodos-pago input {
+    margin-right: 10px;
+}
+
+.contenedor-checkout-resumen {
+    min-width: 300px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.subtotal-resumen, .descuento, .envio, .recargo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.descuento {
+    color: #06ca27;
+}
+
+.recargo {
+    color: rgb(218, 5, 5);
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+.botones-checkout {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-finalizar, .btn-seguir-comprando {
+    margin-top: 0;
+    margin-left: 20px;
+    max-width: 200px;
+}
 
 /* HIDDEN */
+
 .hidden {
     display: none;
 }
