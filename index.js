@@ -32,6 +32,21 @@ const filtroCategoria = document.querySelectorAll(".categoria-vinos");
 const filtroPuntaje = document.querySelectorAll(".filtro-review");
 const botonLimpiarFiltros = document.querySelector("#limpiar-filtros")
 
+// CALCULOS CHECKOUT /////////////////////
+const mostrarSubtotal = document.querySelector(".valor-subtotal")
+const mostrarDescuento = document.querySelector(".valor-descuento")
+const mostrarEnvio = document.querySelector(".valor-envio")
+const mostrarRecargo = document.querySelector(".valor-recargo")
+const mostrarTotal = document.querySelector(".valor-total")
+
+const radioEfectivo = document.querySelector("#pago-efectivo")
+const radioCredito = document.querySelector("#pago-credito")
+const checkboxEnvio = document.querySelector("#envio")
+const checkboxDescuento = document.querySelector("#descuento")
+
+const parrafoDescuento = document.querySelector(".descuento")
+const parrafoEnvio = document.querySelector(".envio")
+const parrafoRecargo = document.querySelector(".recargo")
 
 
 ///////////////// ABRIR Y CERRAR CARRITO /////////////////////////
@@ -277,4 +292,75 @@ botonLimpiarFiltros.onclick = () => {
     for (let producto of productos) {
         producto.classList.remove('hidden')
     }
+}
+
+
+///////////////// CALCULOS CHECKOUT /////////////////////////////////
+
+const subtotal = 1300
+
+mostrarSubtotal.textContent = subtotal
+mostrarTotal.textContent = subtotal
+
+const obtenerGastoEnvio = (subtotal) => {
+    return subtotal + 300
+}
+
+const obtenerRecargo = (subtotal) => {
+    let recargo = subtotal * 0.1
+    return subtotal + recargo
+}
+
+const obtenerDescuento = (subtotal) => {
+    let descuento = subtotal * 0.05
+    return subtotal - descuento
+    
+}
+
+
+radioEfectivo.oninput = () => {
+    mostrarSubtotal.textContent = subtotal
+    mostrarTotal.textContent = obtenerTotal(subtotal)
+}
+
+checkboxDescuento.oninput = () => {
+    parrafoDescuento.classList.toggle("hidden")
+    mostrarDescuento.textContent = subtotal - obtenerDescuento(subtotal)
+    mostrarTotal.textContent = obtenerTotal(subtotal)
+}
+
+radioCredito.oninput = () => {
+    parrafoRecargo.classList.remove("hidden")
+    mostrarRecargo.textContent = obtenerRecargo(subtotal) - subtotal
+    mostrarTotal.textContent = obtenerTotal(subtotal)
+}
+
+checkboxEnvio.oninput = () => {
+    parrafoEnvio.classList.toggle("hidden")
+    mostrarEnvio.textContent = 300
+    mostrarTotal.textContent = obtenerTotal(subtotal)
+}
+
+const obtenerTotal = (subtotal) => {
+    let descuento = 0
+    let recargo = 0
+    let gastosDeEnvio = 0
+    if (checkboxDescuento.checked) {
+        descuento = obtenerDescuento(subtotal) - subtotal
+    }
+    if (radioCredito.checked) {
+        recargo = obtenerRecargo(subtotal) - subtotal
+    }
+    else {
+        parrafoRecargo.classList.add('hidden')
+    }
+    if (checkboxEnvio.checked) {
+        gastosDeEnvio = obtenerGastoEnvio(subtotal) - subtotal
+    }
+    return subtotal + descuento + recargo + gastosDeEnvio
+}
+
+const form = document.querySelector(".form-datos-personales")
+form.onsubmit = (e) => {
+    e.preventDefault();
 }

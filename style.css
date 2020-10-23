@@ -224,7 +224,7 @@ img {
     font-size: 14px;
 }
 
-.btn-vista-grilla, .btn-vista-lista {
+.btn-grilla, .btn-lista {
     font-size: 20px;
     margin-left: 15px;
     padding: 0;
@@ -708,6 +708,10 @@ footer {
     width: 100%;
     min-height: 50px;
     transition: background-color 0.3s;
+}
+
+.btn-modal-vaciar:hover{
+    background-color:#c01a04;
 }
 
 /* HIDDEN */
