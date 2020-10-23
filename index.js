@@ -91,30 +91,30 @@ botonGrilla.onclick = () => {
 // Abrir checkout
 botonAbrirCheckout.onclick = () => {
     overlayCheckout.classList.remove("hidden")
-    document.body.classList.add("no-scroll")
+    // document.body.classList.add("no-scroll")
     checkout.classList.remove("hidden")
 }
 
 // Cerrar checkout
 botonCerrarCheckout.onclick = () => {
     overlayCheckout.classList.add("hidden")
-    document.body.classList.remove("no-scroll")
+    // document.body.classList.remove("no-scroll")
     checkout.classList.add("hidden")
 }
 
 ///////////////// ABRIR Y CERRAR MODAL  /////////////////////////
 
-// Abrir carrito
+// Abrir modal
 botonAbrirModal.onclick = () => {
     overlayCheckout.classList.remove("hidden")
-    document.body.classList.add("no-scroll")
+    // document.body.classList.add("no-scroll")
     modal.classList.remove("hidden")
 }
 
-// Cerrar carrito
+// Cerrar modal
 botonCerrarModal.onclick = () => {
     overlayCheckout.classList.add("hidden")
-    document.body.classList.remove("no-scroll")
+    // document.body.classList.remove("no-scroll")
     modal.classList.add("hidden")
 }
 
@@ -300,13 +300,13 @@ botonLimpiarFiltros.onclick = () => {
 const abrirFiltros = document.querySelector(".btn-filtros-responsive")
 const cerrarFiltros = document.querySelector(".btn-cerrar-filtros")
 const filtros = document.querySelector(".filtros-gral")
+
 // Abrir filtros
 abrirFiltros.onclick = () => {
     overlay.classList.remove("hidden")
     document.body.classList.add("no-scroll")
     filtros.classList.add("mostrar-filtros")
 }
-
 
 // Cerrar filtros
 cerrarFiltros.onclick = () => {

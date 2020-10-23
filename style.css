@@ -394,14 +394,15 @@ footer {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
     padding: 40px 20px;
     background-color: #ffffff;
     position: fixed;
     right: 0;
     top: 0;
-    transform: translate(400px);
+    transform: translateX(100%);
     transition: 0.3s;
 }
 
@@ -683,6 +684,7 @@ footer {
 .btn-modal {
     margin-top: 0;
     max-width: 200px;
+    margin-right: 20px;
 }
 
 .btn-modal-vaciar {
@@ -701,12 +703,36 @@ footer {
 /*////////////// RESPONSIVE  ////////////////////*/
 
 @media (max-width: 850px) {
-    
     /* Filtros */
-    .btn-cerrar-filtros{
-        display: block;
+    .contenedor-gral {
+        margin-top: 30px;
     }
 
+    .producto{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .producto-img-container{
+        height: 250px;
+        max-width: initial;
+    }
+    .producot-img{
+        width: auto;
+        height: 100%;
+    }
+    .info-producto{
+        text-align: center;
+    }
+    .lista{
+        text-align: center;
+    }
+    .lista .descripcion-producto{
+        display: none;
+    }
+    .btn-cerrar-filtros {
+        display: block;
+    }
     .filtros-gral {
         width: 100%;
         height: 100%;
@@ -714,28 +740,27 @@ footer {
         position: fixed;
         top: 0;
         right: 0;
-        z-index:2;
+        z-index: 2;
         padding: 40px 0;
         transform: translateX(100%);
         transition: 0.3s;
         background-color: #fff;
     }
-
     .mostrar-filtros {
         transform: translateX(0%);
     }
-
     .btn-filtros-responsive {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 14px;
     }
-
     .ver-como {
         display: none;
     }
-
+    .seccion-checkout {
+        min-width: auto;
+    }
     .seccion-checkout, .modal {
         display: flex;
         flex-direction: column;
@@ -744,19 +769,23 @@ footer {
         min-height: 100%;
         border-radius: 0;
         min-width: auto;
+        height: 100%;
     }
-
     .contenedor-checkout {
         display: flex;
         flex-direction: column;
     }
-
-    .mensaje-modal{
+    .mensaje-modal {
         flex-grow: 1;
         display: flex;
         align-items: center;
     }
+}
 
+@media (max-width: 650px) {
+    .carrito, .seccion-checkout, .modal {
+        max-width: 100%;
+    }
 }
 
 /*////////////// HIDDEN  ////////////////////*/
