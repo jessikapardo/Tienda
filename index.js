@@ -3,6 +3,10 @@ const botonAbrirCarrito = document.getElementById("btn-carrito")
 const botonCerrarCarrito = document.getElementById("btn-cerrar-carrito")
 const carrito = document.getElementById("carrito")
 const overlay = document.getElementById("overlay")
+const textoCarritoVacio = document.querySelector(".carrito-vacio")
+const carritoConProductos = document.querySelector(".carrito-con-productos")
+const subtotalCarrito = document.querySelector(".subtotal-carrito")
+const botonesCarrito = document.querySelector(".botones-carrito")
 
 // PRODUCTOS EN LISTA O GRILLA//////////////////
 const contenedorProductos = document.querySelector(".contenedor-productos")
@@ -14,6 +18,12 @@ const botonAbrirCheckout = document.querySelector(".btn-comprar-carrito")
 const botonCerrarCheckout = document.querySelector(".btn-seguir-comprando")
 const checkout = document.getElementById("checkout")
 const overlayCheckout = document.getElementById("overlay-checkout")
+
+// ABRIR Y CERRAR MODAL/////////////////////
+const botonAbrirModal = document.querySelector(".btn-vaciar-carrito")
+const botonCerrarModal = document.querySelector(".btn-modal")
+const botonVaciarModal = document.querySelector(".btn-modal-vaciar")
+const modal = document.getElementById("modal")
 
 // FILTROS //////////////////////
 const productos = document.querySelectorAll(".producto");
@@ -38,6 +48,10 @@ botonCerrarCarrito.onclick = () => {
     overlay.classList.add("hidden")
     document.body.classList.remove("no-scroll")
     carrito.classList.remove("mostrar-carrito")
+    textoCarritoVacio.classList.add("hidden")
+    carritoConProductos.classList.remove("hidden")
+    subtotalCarrito.classList.remove("hidden")
+    botonesCarrito.classList.remove("hidden")
 }
 
 
@@ -46,31 +60,58 @@ botonCerrarCarrito.onclick = () => {
 // Productos en lista
 botonLista.onclick = () => {
     contenedorProductos.classList.add("lista")
-    // contenedorProductos.classList.remove("grilla")
+    contenedorProductos.classList.remove("grilla")
 }
 
 // Productos en grilla
 botonGrilla.onclick = () => {
-    // contenedorProductos.classList.add("grilla")
+    contenedorProductos.classList.add("grilla")
     contenedorProductos.classList.remove("lista")
 }
 
 
 ///////////////// ABRIR Y CERRAR CHECKOUT /////////////////////////
 
-// Abrir carrito
+// Abrir checkout
 botonAbrirCheckout.onclick = () => {
     overlayCheckout.classList.remove("hidden")
     document.body.classList.add("no-scroll")
     checkout.classList.remove("hidden")
 }
 
-// Cerrar carrito
+// Cerrar checkout
 botonCerrarCheckout.onclick = () => {
     overlayCheckout.classList.add("hidden")
     document.body.classList.remove("no-scroll")
     checkout.classList.add("hidden")
 }
+
+///////////////// ABRIR Y CERRAR MODAL  /////////////////////////
+
+// Abrir carrito
+botonAbrirModal.onclick = () => {
+    overlayCheckout.classList.remove("hidden")
+    document.body.classList.add("no-scroll")
+    modal.classList.remove("hidden")
+}
+
+// Cerrar carrito
+botonCerrarModal.onclick = () => {
+    overlayCheckout.classList.add("hidden")
+    document.body.classList.remove("no-scroll")
+    modal.classList.add("hidden")
+}
+
+botonVaciarModal.onclick = () => {
+    overlayCheckout.classList.add("hidden")
+    document.body.classList.remove("no-scroll")
+    modal.classList.add("hidden")
+    textoCarritoVacio.classList.remove("hidden")
+    carritoConProductos.classList.add("hidden")
+    subtotalCarrito.classList.add("hidden")
+    botonesCarrito.classList.add("hidden")
+}
+
 
 ///////////////// FILTROS /////////////////////////////////
 

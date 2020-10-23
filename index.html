@@ -24,7 +24,7 @@
             <div class="contenedor-carrito">
                 <button type="button" class="btn-carrito" id="btn-carrito" aria-label="Abrir Carrito">
                     <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                    <p>Carrito (<span>0</span> items)</p>
+                    <p>Carrito (<span>2</span> items)</p>
                 </button>
             </div>
         </nav>
@@ -536,7 +536,7 @@
     <div class="overlay hidden" id="overlay"></div>
 
     <!-- CARRITO -->
-    <aside class="carrito" id="carrito" aria-hidden="false" aria-modal="true">
+    <aside class="carrito" id="carrito" aria-hidden="true" aria-modal="true">
         <!-- HEADER CARRITO -->
         <header>
             <h2 class="titulo-carrito">Carrito</h2>
@@ -552,9 +552,10 @@
 
         <!-- CARRITO CON PRODUCTOS -->
         <div class="carrito-con-productos">
-            <p>1 producto(s) agregado(s)</p>
+            <p>2 producto(s) agregado(s)</p>
             <div class="productos-agregados">
-                <article class="producto-agregado">
+                <article class="producto-agregado" data-nombre="manos negras chardonnay" data-categoria="blancos"
+                data-precio="450" data-rating="4">
                     <img class="producto-carrito-img" src="img/manos-negras-chardonnay.png"
                         alt="Botella vino blanco chardonnay Manos Negras">
                     <div class="producto-carrito-contenido">
@@ -570,12 +571,13 @@
                                 <input class="cantidad" type="number" value="1">
                                 Unidades
                             </label>
-                            <p class="producto-precio-carrito">x $1250</p>
+                            <p class="producto-precio-carrito">x $450</p>
                         </div>
                     </div>
                 </article>
 
-                <article class="producto-agregado">
+                <article class="producto-agregado" data-nombre="traslapiedra chardonnay" data-categoria="blancos"
+                data-precio="850" data-rating="4">
                     <img class="producto-carrito-img" src="img/tras-piedra-chardonnay.png"
                         alt="Botella vino blanco chardonnay Traslapiedra">
                     <div class="producto-carrito-contenido">
@@ -591,16 +593,16 @@
                                 <input class="cantidad" type="number" value="1">
                                 Unidades
                             </label>
-                            <p class="producto-precio-carrito">x $1250</p>
+                            <p class="producto-precio-carrito">x $850</p>
                         </div>
                     </div>
                 </article>
             </div>
         </div>
         <!-- SUBTOTAL -->
-        <p class="subtotal-carrito">Subtotal <span>$1250</span></p>
+        <p class="subtotal-carrito">Subtotal <span>$1300</span></p>
         <!-- BOTONES COMPRA-VACIAR CARRITO -->
-        <div>
+        <div class="botones-carrito">
             <button class="btn-comprar-carrito" aria-label="Boton comprar">COMPRAR</button>
             <button class="btn-vaciar-carrito" aria-label="Boton vaciar carrito">VACIAR</button>
         </div>
@@ -611,7 +613,7 @@
 
         <!-- CHECKOUT -->
 
-        <section class="seccion-checkout hidden" id="checkout" aria-modal="true">
+        <section class="seccion-checkout hidden" id="checkout" aria-modal="true" aria-hidden="true">
             <h2>Checkout</h2>
             <div class="contenedor-checkout">
                 <!-- Checkout info -->
@@ -686,12 +688,22 @@
             </div>
 
             <footer class="botones-checkout">
-                <button class="btn-seguir-comprando btn-agregar-productos">SEGUIR COMPRANDO</button>
-                <button class="btn-finalizar btn-comprar-carrito">FINALIZAR</button>
+                <button class="btn-seguir-comprando btn-agregar-productos" aria-label="Boton seguir comprando">SEGUIR COMPRANDO</button>
+                <button class="btn-finalizar btn-comprar-carrito" aria-label="Boton finalizar">FINALIZAR</button>
             </footer>
         </section>
 
-        
+        <!-- MODAL VACIAR CARRITO -->
+
+        <div class="modal hidden" id="modal" aria-modal="true" aria-hidden="true">
+            <p class="mensaje-modal">
+                Estás por vaciar el carrito, ¿quieres continuar?
+            </p>
+            <footer class="botones-modal">
+                <button type="button" class="btn-modal btn-agregar-productos" aria-label="Boton cancelar">CANCELAR</button>
+                <button type="button" class="btn-modal btn-modal-vaciar" aria-label="Boton vaciar">VACIAR</button>
+            </footer>
+        </div>
 
 
 
