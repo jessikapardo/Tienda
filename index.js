@@ -76,12 +76,12 @@ botonCerrarCarrito.onclick = () => {
 // Productos en lista
 botonLista.onclick = () => {
     contenedorProductos.classList.add("lista")
-    contenedorProductos.classList.remove("grilla")
+    // contenedorProductos.classList.remove("grilla")
 }
 
 // Productos en grilla
 botonGrilla.onclick = () => {
-    contenedorProductos.classList.add("grilla")
+    // contenedorProductos.classList.add("grilla")
     contenedorProductos.classList.remove("lista")
 }
 
@@ -107,20 +107,20 @@ botonCerrarCheckout.onclick = () => {
 // Abrir modal
 botonAbrirModal.onclick = () => {
     overlayCheckout.classList.remove("hidden")
-    // document.body.classList.add("no-scroll")
+    document.body.classList.remove("no-scroll")
     modal.classList.remove("hidden")
 }
 
 // Cerrar modal
 botonCerrarModal.onclick = () => {
     overlayCheckout.classList.add("hidden")
-    // document.body.classList.remove("no-scroll")
+    document.body.classList.add("no-scroll")
     modal.classList.add("hidden")
 }
 
 botonVaciarModal.onclick = () => {
     overlayCheckout.classList.add("hidden")
-    document.body.classList.remove("no-scroll")
+    document.body.classList.add("no-scroll")
     modal.classList.add("hidden")
     textoCarritoVacio.classList.remove("hidden")
     carritoConProductos.classList.add("hidden")
@@ -167,6 +167,7 @@ const filtrarTarjetas = () => {
             ocultarTarjeta(producto)
         }
     }
+    productosMostrados()
 }
 
 // Ver si hay alguna categoría seleccionada
@@ -277,7 +278,7 @@ const pasaFiltros = (producto) => {
         return true
     } else {
         return false
-    }
+    }   
 }
 
 // Limpiar todos los filtros
@@ -293,7 +294,23 @@ botonLimpiarFiltros.onclick = () => {
     for (let producto of productos) {
         producto.classList.remove('hidden')
     }
+    
 }
+
+//////////////// PRODUCTOS MOSTRADOS ////////////////
+
+const cantProductos = document.querySelector(".cant-productos-mostrados");
+
+const productosMostrados = () => {
+	let contador = 0;
+	for (const producto of productos) {
+		if (pasaFiltros(producto)) {
+			contador++;
+		}
+	}
+	cantProductos.innerText = `Mostrando ${contador} producto(s) de ${productos.length}`;
+};
+
 
 /////////////////// FILTROS RESPONSIVE ////////////////////
 // Filtros en responsive
