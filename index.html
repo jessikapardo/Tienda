@@ -24,7 +24,8 @@
             <div class="contenedor-carrito">
                 <button type="button" class="btn-carrito" id="btn-carrito" aria-label="Abrir Carrito">
                     <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                    <p>Carrito (<span>2</span> items)</p>
+                    <p class="items-carrito">Carrito (<span>2</span> items)</p>
+                    <p class="items-carrito-responsive">2</p>
                 </button>
             </div>
         </nav>
@@ -526,10 +527,10 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="contenido-footer">
+    <footer class="contenido-footer">
+        <!-- <div class="contenido-footer"> -->
             <p>THE WINE SIDE - Hecho con mucho 🍷 </p>
-        </div>
+        <!-- </div> -->
     </footer>
 
     <!-- OVERLAY -->
@@ -555,7 +556,7 @@
             <p>2 producto(s) agregado(s)</p>
             <div class="productos-agregados">
                 <article class="producto-agregado" data-nombre="manos negras chardonnay" data-categoria="blancos"
-                data-precio="450" data-rating="4">
+                    data-precio="450" data-rating="4">
                     <img class="producto-carrito-img" src="img/manos-negras-chardonnay.png"
                         alt="Botella vino blanco chardonnay Manos Negras">
                     <div class="producto-carrito-contenido">
@@ -577,7 +578,7 @@
                 </article>
 
                 <article class="producto-agregado" data-nombre="traslapiedra chardonnay" data-categoria="blancos"
-                data-precio="850" data-rating="4">
+                    data-precio="850" data-rating="4">
                     <img class="producto-carrito-img" src="img/tras-piedra-chardonnay.png"
                         alt="Botella vino blanco chardonnay Traslapiedra">
                     <div class="producto-carrito-contenido">
@@ -624,11 +625,11 @@
                         <div class="datos-personales">
                             <label for="nombre-apellido">
                                 Nombre y Apellido*
-                                <input type="text" id="nombre-apellido" placeholder="p. ej.: Ada Lovelace" required/>
+                                <input type="text" id="nombre-apellido" placeholder="p. ej.: Ada Lovelace" required />
                             </label>
                             <label for="email">
                                 Email*
-                                <input type="email" id="email" placeholder="p. ej.: ada.lovelace@gmail.com" required/>
+                                <input type="email" id="email" placeholder="p. ej.: ada.lovelace@gmail.com" required />
                             </label>
                         </div>
                     </div>
@@ -687,8 +688,10 @@
             </div>
 
             <footer class="botones-checkout">
-                <button type="button" class="btn-seguir-comprando btn-agregar-productos" aria-label="Boton seguir comprando">SEGUIR COMPRANDO</button>
-                <button type="submit" class="btn-finalizar btn-comprar-carrito" aria-label="Boton finalizar">FINALIZAR</button>
+                <button type="button" class="btn-seguir-comprando btn-agregar-productos"
+                    aria-label="Boton seguir comprando">SEGUIR COMPRANDO</button>
+                <button type="submit" class="btn-finalizar btn-comprar-carrito"
+                    aria-label="Boton finalizar">FINALIZAR</button>
             </footer>
         </section>
 
@@ -698,7 +701,8 @@
                 Estás por vaciar el carrito, ¿quieres continuar?
             </p>
             <footer class="botones-modal">
-                <button type="button" class="btn-modal btn-agregar-productos" aria-label="Boton cancelar">CANCELAR</button>
+                <button type="button" class="btn-modal btn-agregar-productos"
+                    aria-label="Boton cancelar">CANCELAR</button>
                 <button type="button" class="btn-modal btn-modal-vaciar" aria-label="Boton vaciar">VACIAR</button>
             </footer>
         </div>

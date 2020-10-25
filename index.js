@@ -278,7 +278,7 @@ const pasaFiltros = (producto) => {
         return true
     } else {
         return false
-    }   
+    }
 }
 
 // Limpiar todos los filtros
@@ -294,7 +294,7 @@ botonLimpiarFiltros.onclick = () => {
     for (let producto of productos) {
         producto.classList.remove('hidden')
     }
-    
+
 }
 
 //////////////// PRODUCTOS MOSTRADOS ////////////////
@@ -302,13 +302,13 @@ botonLimpiarFiltros.onclick = () => {
 const cantProductos = document.querySelector(".cant-productos-mostrados");
 
 const productosMostrados = () => {
-	let contador = 0;
-	for (const producto of productos) {
-		if (pasaFiltros(producto)) {
-			contador++;
-		}
-	}
-	cantProductos.innerText = `Mostrando ${contador} producto(s) de ${productos.length}`;
+    let contador = 0;
+    for (const producto of productos) {
+        if (pasaFiltros(producto)) {
+            contador++;
+        }
+    }
+    cantProductos.innerText = `Mostrando ${contador} producto(s) de ${productos.length}`;
 };
 
 
@@ -351,7 +351,7 @@ const obtenerRecargo = (subtotal) => {
 const obtenerDescuento = (subtotal) => {
     let descuento = subtotal * 0.05
     return subtotal - descuento
-    
+
 }
 
 radioEfectivo.oninput = () => {
