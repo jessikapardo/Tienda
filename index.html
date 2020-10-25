@@ -202,7 +202,9 @@
                             </div>
                         </div>
                         <div class="comprar-producto">
-                            <button class="btn-agregar-productos" aria-label="Agregar producto">COMPRAR</button>
+                            <button class="btn-agregar-productos" data-nombre="via revolucionaria criolla"
+                                data-precio="850" data-img="img/via-revo-criolla.png" data-cantidad="1"
+                                aria-label="Agregar producto">COMPRAR</button>
                         </div>
                     </div>
                 </article>
@@ -529,7 +531,7 @@
     <!-- FOOTER -->
     <footer class="contenido-footer">
         <!-- <div class="contenido-footer"> -->
-            <p>THE WINE SIDE - Hecho con mucho 🍷 </p>
+        <p>THE WINE SIDE - Hecho con mucho 🍷 </p>
         <!-- </div> -->
     </footer>
 
@@ -569,7 +571,7 @@
                         </div>
                         <div class="producto-carrito-precio-cant">
                             <label for="cantidad">
-                                <input class="cantidad" type="number" value="1">
+                                <input class="cantidad" id="cantidad" type="number" value="1">
                                 Unidades
                             </label>
                             <p class="producto-precio-carrito">x $450</p>
@@ -591,7 +593,7 @@
                         </div>
                         <div class="producto-carrito-precio-cant">
                             <label for="cantidad">
-                                <input class="cantidad" type="number" value="1">
+                                <input class="cantidad" id="cantidad" type="number" value="1">
                                 Unidades
                             </label>
                             <p class="producto-precio-carrito">x $850</p>
@@ -625,11 +627,13 @@
                         <div class="datos-personales">
                             <label for="nombre-apellido">
                                 Nombre y Apellido*
-                                <input type="text" id="nombre-apellido" placeholder="p. ej.: Ada Lovelace" required />
+                                <input type="text" id="nombre-apellido" placeholder="p. ej.: Ada Lovelace"
+                                    name="nombre y apellido" required />
                             </label>
                             <label for="email">
                                 Email*
-                                <input type="email" id="email" placeholder="p. ej.: ada.lovelace@gmail.com" required />
+                                <input type="email" id="email" placeholder="p. ej.: ada.lovelace@gmail.com" name="email"
+                                    required />
                             </label>
                         </div>
                     </div>
