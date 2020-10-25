@@ -794,12 +794,18 @@ img {
         display: flex;
         align-items: center;
     }
+    .btn-modal{
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 650px) {
     /* Carrito - Checkout - Modal*/
     .carrito, .seccion-checkout, .modal {
         max-width: 100%;
+    }
+    .modal{
+        padding: 100px 30px;
     }
 }
 
@@ -890,7 +896,7 @@ img {
         width: 100%;
     }
     .mensaje-modal {
-        font-size: 25px;
+        font-size: 30px;
     }
 }
 
